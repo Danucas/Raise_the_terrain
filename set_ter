@@ -9,7 +9,7 @@ for y, line in enumerate(reversed(lines)):
         anch = len(line.split(" "))
         z = int(z)
 #       z = 0
-        dis = 120
+        dis = 150
         print("v {} {} {}".format((x - (anch / 2)) * dis, (y - (anch / 2)) * dis, z))
         if (y < len(lines) - 1) and (x < anch - 1):
             faces.append("{}/{} {}/{} {}/{} {}/{}".format((y * anch) + x + 1,

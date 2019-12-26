@@ -84,7 +84,7 @@ scene *init_engine()
 	tr->translation = obj_trans;
 	tr->rotation = obj_rotat;
 	obj->transform = tr;
-	obj->scala = 0.5;
+	obj->scala = 0.48;
 	obj->origin = set_center_origin(&(obj->vertx));
 	scen->obj = obj;
 	scen->camara = cam;

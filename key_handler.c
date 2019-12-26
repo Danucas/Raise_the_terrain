@@ -9,7 +9,7 @@ int key_pressed(int code, scene *scn)
 {
 	int steps = 10;
 
-	printf("Key pressed: code %d\n", code);
+	printf("Key pressed: code %u\n", (unsigned int) code);
 	switch (code)
 	{
 	case 27:  /* ESC */
@@ -32,8 +32,11 @@ int key_pressed(int code, scene *scn)
 		scn->camara->transform->translation->y += steps;
 		scn->viewp->pos->z -= 1;
 		return (1);
-	case 103: /* G */
-		scn->obj->transform->rotation->z += M_PI / 180;
+	case 1073741903: /* -> */
+		scn->obj->transform->rotation->z += M_PI / 90;
+		return (1);
+	case 1073741904: /* <- */
+		scn->obj->transform->rotation->z -= M_PI / 90;
 		return (1);
 	default:
 		break;
